@@ -34,7 +34,7 @@ def squared_error(ys_in, ys_calc):
 def r_coefficient(ys_in, ys_calc):
     return 1 - squared_error(ys_in, ys_calc)/squared_error(ys_in, mean(ys_in))
 
-xs, ys = create_dataset(40, 10, 2, '+')
+xs, ys = create_dataset(40, 1, 2, '+')
 a, b = best_fit(xs, ys)
 new_ys = a * xs + b
 print('Slope is {0:.6f} and intercept is {1:.2f}'.format(a, b))
